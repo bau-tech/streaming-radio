@@ -1,6 +1,6 @@
 FROM alpine:3.20.1
 
-ENV ROMPR_VERSION=2.15 \
+ENV ROMPR_VERSION=2.16 \
 ADMIN_PASSWORD=qwe123test \
 HOSTNAME=localhost \
 NAMESTREAM=radio \
@@ -20,7 +20,7 @@ RUN apk add --update --no-cache wget unzip bash nano tzdata mpd icecast ncmpc su
     php83-pdo_sqlite php83-fileinfo php83-simplexml \
 #
 && cp /usr/share/zoneinfo/America/New_York /etc/localtime \
-&& echo "America/New_York" > /etc/timezone \
+&& echo "Europe/Berlin" > /etc/timezone \
 && apk del tzdata \
 #
 && cd /tmp \
