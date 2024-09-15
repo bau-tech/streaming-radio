@@ -48,7 +48,8 @@ RUN apk add --update --no-cache wget unzip bash nano tzdata mpd icecast ncmpc su
 #
 COPY commradioplugin.class.php /srv/rompr/streamplugins/classes/commradioplugin.class.php
 #
-#RUN chmod 755 /entrypoint.sh
+RUN chmod 755 /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 RUN chown root:root /usr/bin/mpd
 
 EXPOSE 80
