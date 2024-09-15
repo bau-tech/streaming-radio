@@ -15,13 +15,7 @@ Rompr     2.17
 
 ## Installation
 
-Pull the latest version of the image from docker.
-
-```bash
-docker pull nulldev42/streaming-radio
-```
-
-Alternately you can build the image yourself.
+Build the image yourself.
 
 ```bash
 docker build -t bau-tech/streaming-radio https://github.com/bau-tech/streaming-radio.git
@@ -39,7 +33,7 @@ docker run --name streaming-radio -d \
    --volume /yourpath/rompr-albumart:/srv/rompr/albumart \
    --publish 80:80 \
    --publish 8002:8002
-   nulldev42/streaming-radio
+   bau-tech/streaming-radio
 ```
 
 This will start the container and you should now be able to browse the web interface on port 80 and icecast on port 8002.
@@ -51,7 +45,7 @@ Directory "Music" must contain your music files.
 version: '2'
 services:
   streaming-radio:
-    image: nulldev42/streaming-radio
+    image: bau-tech/streaming-radio
     container_name: streaming-radio
     environment:
       ADMIN_PASSWORD: qwe123test
