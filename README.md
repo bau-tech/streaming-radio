@@ -10,7 +10,7 @@ Mpd       0.23.15
 Icecast   2.4.4
 Nginx     1.26.1
 Php       8.3.8
-Rompr     2.15
+Rompr     2.17
 ```
 
 ## Installation
@@ -24,7 +24,7 @@ docker pull nulldev42/streaming-radio
 Alternately you can build the image yourself.
 
 ```bash
-docker build -t nulldev42/streaming-radio https://github.com/nulldev42/streaming-radio.git
+docker build -t bau-tech/streaming-radio https://github.com/bau-tech/streaming-radio.git
 ```
 
 ## Quick Start
